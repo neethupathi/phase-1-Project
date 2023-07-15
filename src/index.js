@@ -1,8 +1,11 @@
 let addFlavor = false
 
 document.addEventListener("DOMContentLoaded", () => {
+  //access id new-flavor-btn using querySelector
   const addBtn = document.querySelector("#new-flavor-btn");
+  //access form container using the class container
   const flavorFormContainer = document.querySelector(".container");
+  //event listener for the form
   addBtn.addEventListener("click", () => {
     // hide & seek with the form
     addFlavor = !addFlavor;
@@ -26,7 +29,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
   fetchFlavors();
 });
-
+//access data from the json server
 function fetchFlavors() {
   return fetch('http://localhost:3000/IceCream')
   .then(res=>res.json())
@@ -38,15 +41,18 @@ function fetchFlavors() {
 
 
 function renderCard(flavor) {
+  //create contents for the app
   const flavorDiv = document.querySelector('#flavor-collection')
     let card = document.createElement('div');
     let img = document.createElement('img');
     let h2 = document.createElement('h2');
+    let h4=document.createElement('h4');
     let p = document.createElement('p');
     let likeBtn = document.createElement('button');
 
     let url = flavor.image;
     let name = flavor.name;
+    let top = flavor.top;
     let likes = flavor.likes;
     let id = flavor.id
 
@@ -56,6 +62,8 @@ function renderCard(flavor) {
 
     card.appendChild(h2)
     h2.innerHTML = name;
+    card.appendChild(h4)
+    h4.innerHTML = top;
 
     card.appendChild(img);
     img.classList.add('flavor-avatar');
@@ -67,7 +75,7 @@ function renderCard(flavor) {
     card.appendChild(likeBtn);
     likeBtn.classList.add("like-btn");
     likeBtn.innerHTML = 'like';
-
+//likes for the icecream
     likeBtn.addEventListener('click', function(){
       p.innerHTML = (likes+= 1) + ' likes';
       fetch(`http://localhost:3000/IceCream/${flavor.id}`, {
@@ -87,6 +95,7 @@ function renderCard(flavor) {
 function handleAdd(event){
   let imgInput = event.target['image'].value;
     let nameInput = event.target['name'].value;
+    let topInput = event.target['top'].value;
     fetch('http://localhost:3000/IceCream', {
       method : 'POST',
       headers : {
@@ -96,6 +105,7 @@ function handleAdd(event){
       body : JSON.stringify({
         "name" : nameInput,
         "image" : imgInput,
+        "top"   : topInput,
         "likes" : 0
       })
     }).then(res=>res.json())

@@ -4,48 +4,56 @@
       "id": 1,
       "name": "Vanilla",
       "image": "https://insanelygoodrecipes.com/wp-content/uploads/2020/04/Ice-Cream.webp",
+      "top":"Caramel" ,
       "likes": 5
     },
     {
       "id": 2,
       "name": "Chocolate",
       "image": "https://insanelygoodrecipes.com/wp-content/uploads/2020/07/Bowl-of-chocolate-ice-cream.webp",
+      "top":"Springles" ,
       "likes": 8
     },
     {
       "id": 3,
       "name": "Strawberry",
       "image": "https://insanelygoodrecipes.com/wp-content/uploads/2020/07/Bowl-Of-Strawberry-Ice-Cream.webp",
+      "top":"Cookie" ,
       "likes": 3
     },
     {
       "id": 4,
       "name": "Mango",
       "image": "https://insanelygoodrecipes.com/wp-content/uploads/2020/07/Mango-Ice-Cream.webp",
+      "top":"M&M" ,
       "likes": 4
     },
     {
       "id": 5,
       "name": "ButterScotch",
       "image": "https://insanelygoodrecipes.com/wp-content/uploads/2020/07/Butterscotch-Ice-Cream.webp",
+      "top":"Oreo" ,
       "likes": 1
     },
     {
       "id": 6,
       "name": "Chocolate Chip",
       "image": "https://insanelygoodrecipes.com/wp-content/uploads/2020/07/bowl-of-chocolate-chip-ice-cream.webp",
+      "top":"Whipped Cream" ,
       "likes": 2
     },
     {
       "id": 7,
       "name": "Cotton Candy",
       "image": "https://insanelygoodrecipes.com/wp-content/uploads/2020/07/Cotton-Candy-Ice-Creams.webp",
+      "top":"Hot Fudge" ,
       "likes": 0
     },
     {
       "id": 8,
       "name": "Peanut Chocolate Fudge",
       "image": "https://insanelygoodrecipes.com/wp-content/uploads/2020/07/Moose-Tracks-Ice-Cream.webp",
+      "top":"Springles" ,
       "likes": 1
     }
   ]
