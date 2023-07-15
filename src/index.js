@@ -1,5 +1,5 @@
 let addFlavor = false
-
+//DOMContentLoaded event is the browser's built-in way to indicate when a page's html is loaded into the DOM
 document.addEventListener("DOMContentLoaded", () => {
   //access id new-flavor-btn using querySelector
   const addBtn = document.querySelector("#new-flavor-btn");
