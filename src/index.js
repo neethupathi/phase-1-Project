@@ -1,4 +1,3 @@
-
 let addFlavor = false
 
 document.addEventListener("DOMContentLoaded", () => {
