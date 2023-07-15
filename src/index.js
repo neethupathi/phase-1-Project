@@ -33,6 +33,7 @@ document.addEventListener("DOMContentLoaded", () => {
 function fetchFlavors() {
   return fetch('http://localhost:3000/IceCream')
   .then(res=>res.json())
+  //forEach() method executes a provided function once for each array element.
   .then(flavorData=>flavorData.forEach(flavor=>renderCard(flavor))
     )
 
