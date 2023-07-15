@@ -44,8 +44,11 @@ function renderCard(flavor) {
   //create contents for the app
   const flavorDiv = document.querySelector('#flavor-collection')
     let card = document.createElement('div');
+    //create image
     let img = document.createElement('img');
+    //create name
     let h2 = document.createElement('h2');
+    //create topping name
     let h4=document.createElement('h4');
     let p = document.createElement('p');
     let likeBtn = document.createElement('button');
@@ -55,7 +58,7 @@ function renderCard(flavor) {
     let top = flavor.top;
     let likes = flavor.likes;
     let id = flavor.id
-
+//add to the container
     flavorDiv.appendChild(card);
     card.classList.add("card");
     card.setAttribute('id', id)
@@ -93,6 +96,7 @@ function renderCard(flavor) {
 }
 
 function handleAdd(event){
+  //access information from the database
   let imgInput = event.target['image'].value;
     let nameInput = event.target['name'].value;
     let topInput = event.target['top'].value;
