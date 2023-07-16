@@ -122,6 +122,7 @@ function handleAdd(event){
     }).then(res=>res.json())
     //converts the body of the response from JSON to a plain old JavaScript object.
     .then(flavor=>renderCard(flavor))
+    //.then can be used to catch errors
 
 
 }
