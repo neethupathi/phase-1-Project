@@ -25,8 +25,7 @@ Yoyo is a IceCream Shop Owner.He is thinking of adding variety of Ice Cream flav
 
 The final product should look like this:
 
-![IceCream Palace working app](file:///Users/neethupathirikkat/my-git-project/index.html)
-
+![IceCream Palace working app](https://neethupathi.github.io/phase-1-Project/)
 Note that this lab **does not contain tests**. You will be working from the
 requirements described below and verifying that your code is working correctly
 in the browser.
