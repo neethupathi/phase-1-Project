@@ -21,6 +21,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
   const newFlavorForm = document.querySelector('form.add-flavor-form')
   newFlavorForm.addEventListener('submit', (event) => {
+    //The event object that gets passed in to our callback function contains preventDefault() method to override our form's behavior
      event.preventDefault();
      handleAdd(event);
      document.querySelector('form.add-flavor-form').reset();
@@ -31,7 +32,9 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 //access data from the json server
 function fetchFlavors() {
+  //The fetch() function retrieves data. It's a global method on the window object.
   return fetch('http://localhost:3000/IceCream')
+  //then() parse the network response, which is formatted as a special JSON string, into actual JavaScript objects.
   .then(res=>res.json())
   //forEach() method executes a provided function once for each array element.
   .then(flavorData=>flavorData.forEach(flavor=>renderCard(flavor))
@@ -107,6 +110,7 @@ function handleAdd(event){
         'Content-Type' : 'application/JSON',
         'Accept' : 'application/JSON'
       },
+      //Data being sent in fetch() must be stored in the body of the configurationObject:
       body : JSON.stringify({
         "name" : nameInput,
         "image" : imgInput,
