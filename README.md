@@ -99,6 +99,7 @@ After all of that, the flavor card should look something like this:
 <div class="card">
   <h2>Vanilla</h2>
   <img src="[flavor_image_url]" class="flavor-pic" />
+  <h4>Caramel</h4>
   <p>4 Likes</p>
   <button class="like-btn" id="[flavor_id]">Like ❤️</button>
 </div>
@@ -128,6 +129,7 @@ headers:
 body: JSON.stringify({
   "name": "Vanilla",
   "image": "https://insanelygoodrecipes.com/wp-content/uploads/2020/04/Ice-Creamwebp",
+  "top":"Caramel" ,
   "likes": 0
 })
 ```
