@@ -27,7 +27,7 @@ document.addEventListener("DOMContentLoaded", () => {
      document.querySelector('form.add-flavor-form').reset();
    })
 
-
+//function to get data
   fetchFlavors();
 });
 //access data from the json server
