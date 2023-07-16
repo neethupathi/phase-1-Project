@@ -107,17 +107,20 @@ function handleAdd(event){
     fetch('http://localhost:3000/IceCream', {
       method : 'POST',
       headers : {
+        //"Content-Type" tells the destination server what type of data we're sending,
         'Content-Type' : 'application/JSON',
         'Accept' : 'application/JSON'
       },
       //Data being sent in fetch() must be stored in the body of the configurationObject:
       body : JSON.stringify({
+        //JavaScript comes with a built-in method for converting objects to strings, JSON.stringify()
         "name" : nameInput,
         "image" : imgInput,
         "top"   : topInput,
         "likes" : 0
       })
     }).then(res=>res.json())
+    //converts the body of the response from JSON to a plain old JavaScript object.
     .then(flavor=>renderCard(flavor))
 
 
